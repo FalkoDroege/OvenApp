@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>809</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+border: none;
+background: black;
+ }
+ QFrame, QLabel, QToolTip{
+background-color: none;
+border-style: inset;
+border-width: 4px;
+border-color: #808080;
+border-radius: 10px;
+padding: 2px;
+color: #FFFFFF;
+text-align: right;
+font-size: 50px;
+ }
+QLabel#lb_tg_Temp {border-style: none;font-size: 50px; color: #b3b3b3;}
+QLabel#lb_is_Temp {border-style: none;font-size: 50px;}
+QLabel#lb_rm_Time {border-style: none;font-size: 100px; text-align: right;}
+QLabel#lb_Step {font-size: 65px;}
+
+QToolButton{
+ background-color: qradialgradient(cx: 0.5, cy: 0.5, radius: 2	, fx: 0.5, fy: 1.5, stop: 0 rgba(255,30,30,255), stop: 0.2 rgba(255,30,30,144), stop: 0.3 rgba(255,30,30,32));
+border-style: outset;
+border-width: 4px;
+border-color: #808080;
+border-radius: 10px;
+padding: 15px;
+color: #FFFFFF;
+text-align: right;
+font-size: 20px;
+background-repeat: no-repeat;
+background-position: center center;
+ }
+QToolButton:hover{
+background-color: qradialgradient(cx: 0.5, cy: 0.5, radius: 2	, fx: 0.5, fy: 1, stop: 0 rgba(255,30,30,255), stop: 0.2 rgba(255,30,30,144), stop: 0.3 rgba(255,30,30,32));
+border-style: inset; }
+QToolButton:pressed{
+background-color: qradialgradient(cx: 0.5, cy: 0.5, radius: 2	, fx: 0.5, fy: 1, stop: 0 rgba(255,30,30,255), stop: 0.2 rgba(255,30,30,144), stop: 0.3 rgba(255,30,30,32));
+border-style: inset;}
+
+</string>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>100</width>
+    <height>100</height>
+   </size>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>671</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="lb_is_Temp">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>10</y>
+       <width>181</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>230 °C</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lb_is_Temp_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>671</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Minimat</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QToolButton" name="settingsButton">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>10</y>
+      <width>80</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton:hover{
+background-color: qradialgradient(cx: 0.5, cy: 0.5, radius: 2	, fx: 0.5, fy: 1, stop: 0 rgba(255,30,30,255), stop: 0.2 rgba(255,30,30,144), stop: 0.3 rgba(255,30,30,32));
+border-style: inset; }
+QPushButton:pressed{
+background-color: qradialgradient(cx: 0.5, cy: 0.5, radius: 2	, fx: 0.5, fy: 1, stop: 0 rgba(255,30,30,255), stop: 0.2 rgba(255,30,30,144), stop: 0.3 rgba(255,30,30,32));
+border-style: inset;}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>img/settings.png</normaloff>img/settings.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>50</width>
+      <height>50</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="onoffButton">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>290</y>
+      <width>175</width>
+      <height>175</height>
+     </rect>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::DefaultContextMenu</enum>
+    </property>
+    <property name="accessibleDescription">
+     <string/>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::RightToLeft</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Ein / Aus</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>img/power-button-off.png</normaloff>img/power-button-off.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>80</width>
+      <height>80</height>
+     </size>
+    </property>
+    <property name="toolButtonStyle">
+     <enum>Qt::ToolButtonTextUnderIcon</enum>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="autoButton">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>100</y>
+      <width>175</width>
+      <height>175</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Automatik</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>img/bread.png</normaloff>img/bread.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>80</width>
+      <height>80</height>
+     </size>
+    </property>
+    <property name="toolButtonStyle">
+     <enum>Qt::ToolButtonTextUnderIcon</enum>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="manButton">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>100</y>
+      <width>175</width>
+      <height>175</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QToolButton:hover{
+background-color: qradialgradient(cx: 0.5, cy: 0.5, radius: 2	, fx: 0.5, fy: 1, stop: 0 rgba(255,30,30,255), stop: 0.2 rgba(255,30,30,144), stop: 0.3 rgba(255,30,30,32));
+border-style: inset; }
+QToolButton:pressed{
+background-color: qradialgradient(cx: 0.5, cy: 0.5, radius: 2	, fx: 0.5, fy: 1, stop: 0 rgba(255,30,30,255), stop: 0.2 rgba(255,30,30,144), stop: 0.3 rgba(255,30,30,32));
+border-style: inset;}
+</string>
+    </property>
+    <property name="text">
+     <string>Manuell</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>img/man_mode.png</normaloff>img/man_mode.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>80</width>
+      <height>80</height>
+     </size>
+    </property>
+    <property name="toolButtonStyle">
+     <enum>Qt::ToolButtonTextUnderIcon</enum>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="doorButton">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>290</y>
+      <width>175</width>
+      <height>175</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Tür</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>img/door.png</normaloff>img/door.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>80</width>
+      <height>80</height>
+     </size>
+    </property>
+    <property name="toolButtonStyle">
+     <enum>Qt::ToolButtonTextUnderIcon</enum>
+    </property>
+   </widget>
+   <widget class="AnalogClock" name="clock" native="true">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>110</y>
+      <width>350</width>
+      <height>350</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>AnalogClock</class>
+   <extends>QWidget</extends>
+   <header>AnalogClock</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>manButton</tabstop>
+  <tabstop>autoButton</tabstop>
+  <tabstop>doorButton</tabstop>
+  <tabstop>onoffButton</tabstop>
+  <tabstop>settingsButton</tabstop>
+ </tabstops>
+ <resources>
+  <include location="ofen.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,14 @@
+<RCC>
+  <qresource prefix="img">
+    <file>img/bread.png</file>
+    <file>img/man_mode.png</file>
+    <file>img/door.png</file>
+    <file>img/temperature.png</file>
+    <file>img/door80.png</file>
+    <file>img/power-button-off.png</file>
+    <file>img/settings.png</file>
+    <file>img/speed.png</file>
+    <file>img/steam.png</file>
+    <file>img/zeit.png</file>
+  </qresource>
+</RCC>
